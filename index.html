@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Slideshow 2!</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Aeron Glemann (http://www.electricprism.com/aeron/)" />
+	<link rel="stylesheet" type="text/css" href="css/slideshow.css" media="screen" />
+	<script type="text/javascript" src="js/mootools.js"></script>
+	<script type="text/javascript" src="js/slideshow.js"></script>
+	<script type="text/javascript" src="js/slideshow.kenburns.js"></script> 
+	<script type="text/javascript">		
+	//<![CDATA[
+	  window.addEvent('domready', function(){
+	    var data = {
+	      '5.jpg': { caption: 'Volcano Asención in Ometepe, Nicaragua.' }, 
+	      '6.jpg': { caption: 'A Ceibu tree.' }, 
+	      '7.jpg': { caption: 'The view from Volcano Maderas.' }, 
+	      '8.jpg': { caption: 'Beer and ice cream.' }
+	    };
+			// data = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '1.jpg', '2.jpg', '3.jpg', '4.jpg', '1.jpg', '2.jpg', '3.jpg', '4.jpg'];
+	    var myShow = new Slideshow.KenBurns('show', data, {controller: {duration: 0, transition: Fx.Transitions.Elastic.easeOut}, height: 750,duration:200,delay:50000,fast:false,overlap:false,transition: function(p){return 0;}, hu: 'images/', thumbnails: false, width: 1000, zoom: [500, 0]});
+	  });
+	//]]>
+	</script>
+</head>
+<body>
+  <div id="show" class="slideshow">
+    <img src="images/1.jpg" alt="Volcano Asención in Ometepe, Nicaragua." />
+  </div>
+</body>
+</html>
