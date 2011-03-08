@@ -39,7 +39,7 @@ Syntax:
 		['pan', 'zoom'].each(function(p){
 				if ($chk(this[p])){
 					if ($type(this[p]) != 'array') this[p] = [this[p], this[p]];
-					this[p].map(function(n){return (n.toInt() || 0).limit(0, 500);});					
+					this[p].map(function(n){return (n.toInt() || 0).limit(0, 800);});					
 				}
 		}, options);
 		this.parent(el, data, options);
@@ -67,7 +67,7 @@ Private method: show
 		dw = this.width / this.preloader.width;
 		delta = (dw > dh) ? dw : dh;
 		var values = {};
-		var zoom = ($random.run(this.options.zoom) / 100.0)+1;
+		var zoom = (this.options.zoom / 100.0)+1;
 		var pan = Math.abs(($random.run(this.options.pan) / 100.0) - 1);
 		['height', 'width'].each(function(prop, i){
 			var e = Math.ceil(this.preloader[prop] * delta);
