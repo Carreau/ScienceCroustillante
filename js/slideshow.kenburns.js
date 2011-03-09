@@ -67,7 +67,7 @@ Private method: show
 		dw = this.width / this.preloader.width;
 		delta = (dw > dh) ? dw : dh;
 		var values = {};
-		var zoom = (this.options.zoom / 100.0)+1;
+		var zoom = 8.0;
 		var pan = Math.abs(($random.run(this.options.pan) / 100.0) - 1);
 		['height', 'width'].each(function(prop, i){
 			var e = Math.ceil(this.preloader[prop] * delta);
